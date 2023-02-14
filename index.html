@@ -7,12 +7,12 @@
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="buildBoard(3)">
     <!--Main container-->
     <div class="main">
       <h1>Etch-A-Sketch</h1>
       <!--Sketch container-->
-      <div class="board"></div>
+      <div id="board" class="board"></div>
       <!--Menu container with all options-->
       <div class="menu">
         <!--Clear board-->
