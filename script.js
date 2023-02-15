@@ -13,8 +13,9 @@ function buildBoard(size) {
 //Function to change the ratio for the grid template
 function columnRatio(size) {
   let board = document.getElementById("board");
-  let percentage = 100 / size;
-  board.style.gridTemplateColumns = `repeat(${size}, ${percentage}%);`;
+  let percentage =`repeat(${size}, ${100 / size}%)`;
+  board.style.gridTemplateColumns = percentage;
+  board.style.gridTemplateRows = percentage;
 }
 //Listen for mouse click on board
 //When click held, add class to divs inside of "board" div
