@@ -11,15 +11,24 @@
     <!--Main container-->
     <div class="main">
       <h1>Etch-A-Sketch</h1>
-      <!--Sketch container-->
-      <div id="board" class="board"></div>
-      <!--Menu container with all options-->
-      <div class="menu">
-        <!--Clear board-->
-        <!--Change color-->
-        <!--Choose rainbow color-->
-        <!--Change board size-->
-        <!--Add/Remove Grid lines-->
+      <div class="content">
+        <!--Sketch container-->
+        <div id="board" class="board"></div>
+        <!--Menu container with all options-->
+        <div class="menu">
+          <!--Change color-->
+          <button class="button">Change Color</button>
+          <!--Choose rainbow color-->
+          <button class="button">Rainbow Color</button>
+          <!--Change board size-->
+          <div class="slidecontainer">
+            <input type="range" min="2" max="64" value="16" class="slider" id="myRange" />
+          </div>
+          <!--Clear board-->
+          <button class="button">Clear Board</button>
+          <!--Add/Remove Grid lines-->
+          <button class="button">Toggle Grid Lines</button>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
