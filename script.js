@@ -66,7 +66,13 @@ function gridToggle(){
 
 //Listen for button clicks to change options
 
-var rangeInput = document.getElementById("myRange");
+let rangeInput = document.getElementById("myRange");
+let boardSize = document.getElementById("boardSize");
+
+rangeInput.addEventListener("input", function(){
+
+  boardSize.textContent = `${this.value}x${this.value}`
+});
 
 rangeInput.addEventListener("mouseup", function () {
   if (this.value > 0 && this.value < 0) {
