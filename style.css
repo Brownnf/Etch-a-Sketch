@@ -19,12 +19,13 @@
   display: grid;
   grid-template-columns: repeat(16, 12.5%);
   grid-template-rows: repeat(16, 12.5%);
-  width: 40vw;
-  height: 40vw;
+  width: 35vw;
+  height: 35vw;
   min-width: 300px;
   min-height: 300px;
   max-width: calc(100vh - 2em);
   max-height: calc(100vh - 2em);
+  margin-bottom: 5px;
   border: 1px solid black;
   position: sticky;
 }
@@ -34,13 +35,15 @@
   border: none;
   color: white;
   padding: 15px 32px;
+  margin: 0px 5px 0px 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
 }
 
-.tile {
+
+.grid {
   border: 1px solid black;
 }
 

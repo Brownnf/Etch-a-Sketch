@@ -9,7 +9,7 @@ function buildBoard(size) {
   size = size * size;
   for (i = 0; i < size; i++) {
     let tile = document.createElement("div");
-    tile.className = "tile";
+    tile.className = "tile grid";
     //Append divs to "board" div
     document.getElementById("board").appendChild(tile);
   }
@@ -39,7 +39,7 @@ observer.observe(divArray, { attributes: false, childList: true, subtree: true }
 
 //Clear board function
 function clearboard(){
-  //Get board
+  //Get tiles that have been changed
   let board = document.getElementById("board").querySelectorAll(".black");
   //Build array
   let boardArray = Array.from(board);
@@ -48,6 +48,19 @@ function clearboard(){
     element.classList.remove("black");
     
   });
+}
+
+//Toggle gridlines function
+function gridToggle(){
+    //Get board
+    let board = document.getElementById("board").querySelectorAll(".tile");
+    //Build array
+    let boardArray = Array.from(board);
+      //Toggle grid class on all the divs
+      boardArray.forEach(element => {
+        element.classList.toggle("grid");
+        
+      });
 }
 
 
