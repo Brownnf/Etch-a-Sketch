@@ -17,18 +17,18 @@
         <!--Menu container with all options-->
         <div class="menu">
           <!--Change color-->
-          <button type="button" class="button" onclick ="">Change Color</button>
+          <button type="button" class="button" onclick="">Change Color</button>
           <!--Choose rainbow color-->
-          <button type="button" class="button" onclick ="">Rainbow Color</button>
+          <button type="button" class="button" onclick="colorChoice('rainbow')">Rainbow Color</button>
           <!--Change board size-->
           <div class="slidecontainer">
             <input autocomplete="off" type="range" min="2" max="32" value="16" class="slider" id="myRange" />
             <div id="boardSize">16x16</div>
           </div>
           <!--Clear board-->
-          <button type="button" class="button" onclick ="clearboard()">Clear Board</button>
+          <button type="button" class="button" onclick="clearBoard()">Clear Board</button>
           <!--Add/Remove Grid lines-->
-          <button type="button" class="button" onclick ="gridToggle()">Toggle Grid Lines</button>
+          <button type="button" class="button" onclick="gridToggle()">Toggle Grid Lines</button>
         </div>
       </div>
     </div>
