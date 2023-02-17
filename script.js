@@ -37,6 +37,18 @@ let observer = new MutationObserver(function(){
 });
 observer.observe(divArray, { attributes: false, childList: true, subtree: true });
 
+//Clear board function
+function clearboard(){
+  //Get board
+  let board = document.getElementById("board").querySelectorAll(".black");
+  //Build array
+  let boardArray = Array.from(board);
+  //Clear selected divs of their "black" class
+  boardArray.forEach(element => {
+    element.classList.remove("black");
+    
+  });
+}
 
 
 //Listen for button clicks to change options
