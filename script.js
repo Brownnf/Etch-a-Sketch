@@ -22,8 +22,23 @@ function columnRatio(size) {
   board.style.gridTemplateColumns = percentage;
   board.style.gridTemplateRows = percentage;
 }
-//Listen for mouse click on board
-//When click held, add class to divs inside of "board" div
+
+//Get sketch board
+let divArray = document.getElementById('board');
+
+//Observe the board, and add the event listeners once the divs have been populated
+let observer = new MutationObserver(function(){
+   let tiles = document.getElementsByClassName('tile');
+   let tileArray = Array.from(tiles);
+   tileArray.forEach((tileArray) => {
+    tileArray.addEventListener('mouseover', () => {tileArray.classList.add("black");
+    });
+  });
+});
+observer.observe(divArray, { attributes: false, childList: true, subtree: true });
+
+
+
 //Listen for button clicks to change options
 
 var rangeInput = document.getElementById("myRange");
