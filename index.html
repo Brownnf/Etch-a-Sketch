@@ -17,7 +17,17 @@
         <!--Menu container with all options-->
         <div class="menu">
           <!--Change color-->
-          <button type="button" class="button" onclick="">Change Color</button>
+          <button type="button" class="button" onclick="">
+            Pick
+            <input
+              type="color"
+              id="colorPicker"
+              name="colorPicker"
+              autocomplete="off"
+              value="#ff0000"
+              onchange="colorChoice(colorPicker.value)"
+            />
+          </button>
           <!--Choose rainbow color-->
           <button type="button" class="button" onclick="colorChoice('rainbow')">Rainbow Color</button>
           <!--Change board size-->

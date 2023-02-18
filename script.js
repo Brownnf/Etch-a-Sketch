@@ -27,19 +27,25 @@ function columnRatio(size) {
 
 let color = "black";
 let standard = true;
+let option = "";
 
 //function to get user color
 function colorChoice(choice) {
+  console.log(choice);
   if (choice == "rainbow") {
     color = ["#3C9EE7", "#E7993C", "#E73C99", "#3CE746", "#E7993C"];
-    standard = false;
+    option = "rainbow";
     buildBoard(bsize);
-  } else if (choice !== "black") {
-    color = choice;
-    standard = false;
+  }
+  //Get user choice
+  else if (choice == "black") {
+    color = "black";
+    option = "black";
     buildBoard(bsize);
   } else {
-    standard = true;
+    color = choice;
+    option = "person";
+    buildBoard(bsize);
   }
 }
 
@@ -51,13 +57,14 @@ let observer = new MutationObserver(function () {
   let tiles = document.getElementsByClassName("tile");
   let tileArray = Array.from(tiles);
   tileArray.forEach((tileArray) => {
-    if (standard == true) {
-      tileArray.addEventListener("mouseover", () => {
-        tileArray.style.background = color;
-      });
-    } else if (standard == false) {
+    if (option == "rainbow") {
       tileArray.addEventListener("mouseover", () => {
         tileArray.style.background = color[Math.floor(Math.random() * color.length)];
+        tileArray.style.background = color;
+      });
+    } else {
+      tileArray.addEventListener("mouseover", () => {
+        tileArray.style.background = color;
       });
     }
   });
